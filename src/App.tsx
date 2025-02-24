@@ -1,8 +1,7 @@
 import type { ReactNode } from 'react';
 
 const App = (): ReactNode => {
-  const a: number = 0;
-  console.log(a);
+  console.log;
   return <div>Хуй</div>;
 };
 export default App;
