@@ -85,7 +85,7 @@ jobs:
         run: npm run build | echo -e "\033[32mЗапуск сборки\033[0m"
 
       - name: Проверить содержимое папки dist
-        run: ls -la ./dist
+        run: ls -la .
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
