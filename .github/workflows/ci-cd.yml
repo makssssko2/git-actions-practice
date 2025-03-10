@@ -83,3 +83,9 @@ jobs:
 
       - name: Build project
         run: npm run build | echo -e "\033[32mЗапуск сборки\033[0m"
+
+      - name: Upload build artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: build-artifacts
+          path: ./dist

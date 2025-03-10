@@ -13,7 +13,7 @@
     "esModuleInterop": true,
     "moduleDetection": "force",
     "composite": true,
-    "emitDeclarationOnly": false
+    "emitDeclarationOnly": true
   },
   "include": ["../vite.config.ts"]
 }
