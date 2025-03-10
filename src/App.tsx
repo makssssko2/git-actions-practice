@@ -1,7 +1,7 @@
-import type { ReactNode } from 'react';
+import Paragraph from './components/Paragraph.tsx';
 
-const App = (): ReactNode => {
+const App = () => {
   const obj = {};
-  return <div>Люблю гитхаб</div>;
+  return <Paragraph text="Я люблю гитхаб" />;
 };
 export default App;
