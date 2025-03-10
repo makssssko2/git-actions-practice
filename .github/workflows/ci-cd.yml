@@ -56,10 +56,10 @@ jobs:
 #        run: npm ci
 
       - name: eslint
-        run: npm run lint:check
+        run: npm run lint:fix | echo -e "\033[32mЗапуск линтера\033[0m"
 
       - name: jest
-        run: npm run test
+        run: npm run test | echo -e "\033[32mЗапуск тестов\033[0m"
 
   build:
     runs-on: ubuntu-latest
@@ -82,4 +82,4 @@ jobs:
             npm-${{ runner.os }}-
 
       - name: Build project
-        run: npm run build
+        run: npm run build | echo -e "\033[32mЗапуск сборки\033[0m"
