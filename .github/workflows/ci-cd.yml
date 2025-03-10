@@ -21,7 +21,7 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: npm ci | echo -e "\033[32mУстановка зависимостей...\033[0m"
+        run: npm ci
 
       - name: Cache dependencies
         uses: actions/cache@v4
@@ -51,14 +51,11 @@ jobs:
           restore-keys: |
             npm-${{ runner.os }}-
 
-#      - name: Install dependencies
-#        run: npm ci
-
       - name: eslint
-        run: npm run lint:fix | echo -e "\033[32mЗапуск линтера\033[0m"
+        run: npm run lint:fix
 
       - name: jest
-        run: npm run test | echo -e "\033[32mЗапуск тестов\033[0m"
+        run: npm run test
 
   build:
     runs-on: ubuntu-latest
@@ -82,9 +79,6 @@ jobs:
 
       - name: Build project
         run: npm run build
-
-      - name: Проверить содержимое папки dist
-        run: ls -la .
 
       - name: Upload build artifacts
         uses: actions/upload-artifact@v4
