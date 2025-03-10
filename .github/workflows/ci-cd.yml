@@ -19,7 +19,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm' # Кэширование node_modules
 
       - name: Install dependencies
         run: npm ci | echo -e "\033[32mУстановка зависимостей...\033[0m"
