@@ -82,7 +82,7 @@ jobs:
             npm-${{ runner.os }}-
 
       - name: Build project
-        run: npm run build | echo -e "\033[32mЗапуск сборки\033[0m"
+        run: npm run build
 
       - name: Проверить содержимое папки dist
         run: ls -la .
