@@ -14,9 +14,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        run: |
-          echo -e "\033[32mЧекаут репозитория\033[0m"
-  
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -25,7 +22,7 @@ jobs:
           cache: 'npm' # Кэширование node_modules
 
       - name: Install dependencies
-        run: npm ci
+        run: npm ci | echo -e "\033[32mУстановка зависимостей...\033[0m"
 
       - name: Cache dependencies
         uses: actions/cache@v4
