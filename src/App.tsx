@@ -1,7 +1,6 @@
-import type { ReactNode } from 'react';
-
-const App = (): ReactNode => {
-  const obj = {};
-  return <div>Люблю гитхаб</div>;
+const App = () => {
+  // eslint-disable-next-line no-loss-of-precision
+  console.log(11111111111111111111111);
+  return <>Я в шкафу прчусь</>;
 };
 export default App;
