@@ -1,6 +1,5 @@
 name: CI CD Pipeline
 on:
-  push:
   pull_request:
     types:
       - closed
@@ -91,6 +90,12 @@ jobs:
     runs-on: self-hosted
     needs: build
     steps:
+      - name: Remove old build folder if exists
+        run: |
+          if [ -d ${{ env.TARGET_DIR }} ]; then
+            sudo rm -rf "$TARGET_DIR"
+            echo "Старая папка удалена."
+          fi
       - name: Checkout repository
         uses: actions/checkout@v4
 
